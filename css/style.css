@@ -54,7 +54,7 @@ a {
   text-decoration: none;
 }
 a:visited {
-  color: #944a5f;
+  color: #3B7F94;
 }
 a:hover, a:focus {
   color: #E07090;
@@ -92,5 +92,30 @@ img {
 .button:active {
   background-color: #4fe0b2;
   border-bottom: 2px solid #38A180;
+  text-decoration: none;
+}
+
+.button.ghost {
+  display: inline-block;
+  background-color: transparent;
+  color: #55b6d4 !important;
+  text-transform: uppercase;
+  border: 2px solid #55b6d4;
+  /* transition: 0.2s; /* oh, this is doing a "scaling" effect on reload */
+}
+.button.ghost:visited {
+  color: #f7fffd;
+  text-decoration: none;
+}
+.button.ghost:hover, .button.contact:focus {
+  opacity: 0.8;
+  background-color: #55b6d4;
+  color: #f7fffd !important; /* yes, this !important is needed */
+  border-bottom: 2px solid #3B7F94;
+  transition: 0.2s;
+}
+.button.ghost:active {
+  background-color: #4fe0b2;
+  border: 2px solid #38A180 !important;
   text-decoration: none;
 }
