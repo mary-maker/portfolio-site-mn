@@ -7,3 +7,7 @@ Text Color (Black): #12313b;
 Background Color (White): #f7fffd;
 Additional Color (Grey): #a8b8bc;
 */
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
