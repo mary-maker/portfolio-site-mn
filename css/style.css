@@ -1,11 +1,14 @@
 /*
 Colors used:
-Primary Color 1 (Blue): #55b6d4;
-Primary Color 2 (Green): #4fe0b2
-Secondary Color (Pink): #e07090;
+Primary Color 1 (Blue): #55b6d4; - Darker: #3B7F94;
+Primary Color 2 (Green): #4fe0b2; - Darker: #38A180;
+Secondary Color (Pink): #e07090; - Darker: #944A5F;
 Text Color (Black): #12313b;
-Background Color (White): #f7fffd;
-Additional Color (Grey): #a8b8bc;
+(White): #f7fffd;
+(Grey): #a8b8bc;
+Fonts used:
+Raleway 400 and 700;
+Roboto 300 and 500;
 */
 
 body {
@@ -64,4 +67,30 @@ a:active {
 
 img {
   width: 100%;
+}
+
+/* .button at the end, so it can override previous <a> */
+.button {
+  display: inline-block;
+  background-color: #55b6d4;
+  font-weight: 500;
+  color: #f7fffd;
+  padding: 4px 8px 6px 8px;
+  border-radius: 4px;
+  border-bottom: 2px solid #3B7F94;
+  transition: 0.2s opacity; /* see .button:hover */
+}
+.button:visited {
+  color: #f7fffd;
+  text-decoration: none;
+}
+.button:hover, .button:focus {
+  opacity: 0.8;
+  color: #f7fffd;
+  text-decoration: none;
+}
+.button:active {
+  background-color: #4fe0b2;
+  border-bottom: 2px solid #38A180;
+  text-decoration: none;
 }
