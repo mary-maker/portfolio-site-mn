@@ -42,7 +42,26 @@ p {
   line-height: 1.5;
 }
 
+/* Mind the order: visited - hover - active*/
+/* :hover, :active, etc are pseudo classes */
 a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #55b6d4;
+  text-decoration: none;
+}
+a:visited {
+  color: #944a5f;
+}
+a:hover, a:focus {
   color: #E07090;
   text-decoration: underline;
+}
+a:active {
+  color: #4fe0b2;
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
 }
