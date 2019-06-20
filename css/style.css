@@ -120,11 +120,3 @@ img {
   border: 2px solid #38A180 !important;
   text-decoration: none;
 }
-
-header {
-  /*position: fixed;*/
-  background-color: #f7fffd;
-  padding: 10px;
-  margin: 5px auto;
-  border-bottom: 1px dashed #55b6d4;
-}
