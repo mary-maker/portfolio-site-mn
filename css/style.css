@@ -5,6 +5,7 @@ Primary Color 2 (Green): #4fe0b2; - Darker: #38A180;
 Secondary Color (Pink): #e07090; - Darker: #944A5F;
 Text Color (Black): #12313b;
 (White): #f7fffd;
+(White-Blue): #E7F6FB;
 (Grey): #a8b8bc;
 Fonts used:
 Raleway 400 and 700;
@@ -22,6 +23,39 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: #12313b;
+}
+
+header {
+  background-color: #E7F6FB;
+  text-align: center;
+  padding: 10px 0;
+}
+nav {
+  display: inline-block;
+  width: 100%; /* dev-tool in use, eyes pinching and wondering if it did work... */
+}
+/* note the ">" for referring only to unorded lists INSIDE of Navigation Bar(s) - maybe since HTML5 because <nav> exists since HTML5? */
+nav > ul {
+  list-style-type: none;
+  padding: 0; /* there was a default padding-left of 40px, now it's gone */
+}
+nav > ul > li {
+  display: inline-block;
+  padding: 0 15px; /* I decided to put the padding into the <li> instead of <a> - just in case, there is less likely a broken <li> than a broken <a> */
+}
+nav> ul > li > a {
+  text-transform: uppercase; /* I want to see broken <a> if these happens to be non-uppercase */
+}
+nav> ul > li > a:visited {
+  color: #55b6d4;
+}
+nav> ul > li > a:hover, a:focus  {
+  color: #55b6d4;
+  font-weight: 700;
+}
+nav> ul > li > a:active {
+  text-decoration: underline;
+  color: #4fe0b2;
 }
 
 h1, h2, h3, h4 {
@@ -50,7 +84,7 @@ p {
   line-height: 1.5;
 }
 
-/* Mind the order: visited - hover - active*/
+/* Mind the order: visited - hover/focus - active*/
 /* :hover, :active, etc are pseudo classes */
 a {
   font-family: 'Roboto', sans-serif;
@@ -80,6 +114,12 @@ img {
 }
 .row {
   margin: 25px 0;
+}
+.center {
+  text-align: center;
+}
+.logo {
+  max-width: 250px;
 }
 
 /* .button at the end, so it can override previous <a> */
@@ -132,6 +172,13 @@ img {
   background-color: #4fe0b2;
   border: 2px solid #38A180 !important;
   text-decoration: none;
+}
+
+#hero {
+  display: inline-block;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #E7F6FB;
 }
 
 #work .row {
