@@ -26,9 +26,13 @@ body {
 }
 
 header {
+  position: fixed;
   background-color: #E7F6FB;
   text-align: center;
   padding: 10px 0;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(59, 127, 148, 0.75);
+  -moz-box-shadow:    0px 1px 5px 0px rgba(59, 127, 148, 0.75);
+  box-shadow:         0px 1px 5px 0px rgba(59, 127, 148, 0.75);
 }
 nav {
   display: inline-block;
@@ -38,24 +42,29 @@ nav {
 nav > ul {
   list-style-type: none;
   padding: 0; /* there was a default padding-left of 40px, now it's gone */
+  margin-bottom: 5px;
 }
 nav > ul > li {
   display: inline-block;
   padding: 0 15px; /* I decided to put the padding into the <li> instead of <a> - just in case, there is less likely a broken <li> than a broken <a> */
 }
-nav> ul > li > a {
+nav > ul > li > a {
   text-transform: uppercase; /* I want to see broken <a> if these happens to be non-uppercase */
 }
-nav> ul > li > a:visited {
+nav > ul > li > a:visited {
   color: #55b6d4;
 }
-nav> ul > li > a:hover, a:focus  {
+nav > ul > li > a:hover, a:focus  {
   color: #55b6d4;
   font-weight: 700;
 }
-nav> ul > li > a:active {
+nav > ul > li > a:active {
   text-decoration: underline;
   color: #4fe0b2;
+}
+
+main {
+  padding-top: 75px;
 }
 
 h1, h2, h3, h4 {
