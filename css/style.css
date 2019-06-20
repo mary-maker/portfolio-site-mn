@@ -78,6 +78,7 @@ img {
   padding: 4px 8px 6px 8px;
   border-radius: 4px;
   border-bottom: 2px solid #3B7F94;
+  margin-bottom: 15px;
   transition: 0.2s opacity; /* see .button:hover */
 }
 .button:visited {
@@ -118,4 +119,12 @@ img {
   background-color: #4fe0b2;
   border: 2px solid #38A180 !important;
   text-decoration: none;
+}
+
+header {
+  /*position: fixed;*/
+  background-color: #f7fffd;
+  padding: 10px;
+  margin: 5px auto;
+  border-bottom: 1px dashed #55b6d4;
 }
