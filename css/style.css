@@ -11,6 +11,11 @@ Raleway 400 and 700;
 Roboto 300 and 500;
 */
 
+/* this star is the universial selector - apply style to ALL HTML elements (put at the start, so following styles can overwrite)*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -69,6 +74,14 @@ img {
   width: 100%;
 }
 
+/* Layout */
+.container {
+  padding: 0 10px;
+}
+.row {
+  margin: 25px 0;
+}
+
 /* .button at the end, so it can override previous <a> */
 .button {
   display: inline-block;
@@ -119,4 +132,9 @@ img {
   background-color: #4fe0b2;
   border: 2px solid #38A180 !important;
   text-decoration: none;
+}
+
+#work .row {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a8b8bc;
 }
