@@ -36,7 +36,7 @@ header {
   width: 100%; /* added 24/05/19: if you do end up using position: fixed for your <header>, make sure you add a width of 100%, as well, the same as you did whenever you used display: inline-block. Otherwise, it won’t expand to fill the full width of larger screens later. */
   background-color: #f7fffd;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0 10px 0;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(59, 127, 148, 0.75);
   -moz-box-shadow:    0px 1px 5px 0px rgba(59, 127, 148, 0.75);
   box-shadow:         0px 1px 5px 0px rgba(59, 127, 148, 0.75);
@@ -74,7 +74,7 @@ nav > ul > li > a:active {
 }
 
 main {
-  padding-top: 75px;
+  padding-top: 88px;
 }
 
 footer {
@@ -151,17 +151,6 @@ img {
 .center {
   text-align: center;
 }
-.logo {
-  max-width: 250px;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  /* fancy gradiant - but WebAIM fail */
-  background: -webkit-linear-gradient(#55b6d4, #4fe0b2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* .button at the end, so it can override previous <a> */
 .button {
@@ -214,12 +203,32 @@ img {
   border: 2px solid #38A180 !important;
   text-decoration: none;
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#logo {
+  max-width: 250px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  /* fancy gradiant - but WebAIM fail */
+  background: -webkit-linear-gradient(#55b6d4, #4fe0b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 #hero {
   display: inline-block;
   padding: 20px 0;
   width: 100%;
   background-color: #E7F6FB;
+}
+#hero span {
+  display: block;
 }
 
 #work .row {
@@ -233,13 +242,44 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
-    padding: 20px 0 13px;
+    padding: 20px 15px;
   }
   nav {
     width: auto;
     float: right;
   }
-  .logo {
-    padding-top: 12px;
+  nav > ul {
+    margin-bottom: 0px;
+    margin-top: 4px;
+  }
+  main {
+    padding-top: 65px;
+  }
+  h3 {
+    margin-top: 8px;
+  }
+  img {
+    margin-top: 16px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 0 20px 0 0;
+  }
+  .col-md-4 {
+    width: 33,3%;
+  }
+  .col-md-6 /* naming because of 6 times column of standard web-grid of 12  */
+  {
+    width: 50%;
+  }
+  .col-md-8 {
+    width: 66,6%;
+  }
+  #about-page h3 {
+    margin-top: 0;
   }
 }
