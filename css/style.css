@@ -10,6 +10,12 @@ Text Color (Black): #12313b;
 Fonts used:
 Raleway 400 and 700;
 Roboto 300 and 500;
+
+fancy gradiant:
+background: #55B6D4;
+background: -moz-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+background: -webkit-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+background: linear-gradient(135deg, #55B6D4 0%, #4fe0b2 100%);
 */
 
 /* this star is the universial selector - apply style to ALL HTML elements (put at the start, so following styles can overwrite)*/
@@ -27,7 +33,8 @@ body {
 
 header {
   position: fixed;
-  background-color: #E7F6FB;
+  width: 100%; /* added 24/05/19: if you do end up using position: fixed for your <header>, make sure you add a width of 100%, as well, the same as you did whenever you used display: inline-block. Otherwise, it won’t expand to fill the full width of larger screens later. */
+  background-color: #f7fffd;
   text-align: center;
   padding: 10px 0;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(59, 127, 148, 0.75);
@@ -36,31 +43,34 @@ header {
 }
 nav {
   display: inline-block;
-  width: 100%; /* dev-tool in use, eyes pinching and wondering if it did work... */
+  width: 100%;
 }
 /* note the ">" for referring only to unorded lists INSIDE of Navigation Bar(s) - maybe since HTML5 because <nav> exists since HTML5? */
 nav > ul {
   list-style-type: none;
   padding: 0; /* there was a default padding-left of 40px, now it's gone */
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+  margin-top: 12px;
 }
 nav > ul > li {
   display: inline-block;
   padding: 0 15px; /* I decided to put the padding into the <li> instead of <a> - just in case, there is less likely a broken <li> than a broken <a> */
 }
 nav > ul > li > a {
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase; /* I want to see broken <a> if these happens to be non-uppercase */
+  color: #a8b8bc;
 }
 nav > ul > li > a:visited {
-  color: #55b6d4;
+  color: #a8b8bc;
 }
 nav > ul > li > a:hover, a:focus  {
-  color: #55b6d4;
+  color: #a8b8bc;
   font-weight: 700;
 }
 nav > ul > li > a:active {
-  text-decoration: underline;
   color: #4fe0b2;
+  font-weight: 700;
 }
 
 main {
@@ -79,7 +89,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.4em;
+  font-size: 2em;
 }
 
 h2 {
@@ -127,6 +137,13 @@ img {
 /* Layout */
 .container {
   padding: 0 10px;
+  /*background-color: #E7F6FB;*/
+}
+.gradient {
+  background: #55B6D4;
+  background: -moz-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+  background: -webkit-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+  background: linear-gradient(135deg, #55B6D4 0%, #4fe0b2 100%);
 }
 .row {
   margin: 25px 0;
@@ -136,6 +153,14 @@ img {
 }
 .logo {
   max-width: 250px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  /* fancy gradiant - but WebAIM fail */
+  background: -webkit-linear-gradient(#55b6d4, #4fe0b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* .button at the end, so it can override previous <a> */
@@ -200,4 +225,21 @@ img {
 #work .row {
   padding-bottom: 20px;
   border-bottom: 1px solid #a8b8bc;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+  }
+  .logo {
+    padding-top: 12px;
+  }
 }
