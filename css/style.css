@@ -139,6 +139,11 @@ img {
   padding: 0 10px;
   /*background-color: #E7F6FB;*/
 }
+.hundred{
+  width: 100%;
+  max-width 100%;
+  height: auto;
+}
 .gradient {
   background: #55B6D4;
   background: -moz-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
@@ -155,14 +160,19 @@ img {
 /* .button at the end, so it can override previous <a> */
 .button {
   display: inline-block;
-  background-color: #55b6d4;
+  /*background-color: #55b6d4;*/
+  /*fancy gradiant:*/
+  background: #55B6D4;
+  background: -moz-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+  background: -webkit-linear-gradient(-45deg, #55B6D4 0%, #4fe0b2 100%);
+  background: linear-gradient(135deg, #55B6D4 0%, #4fe0b2 100%);
   font-weight: 500;
   color: #f7fffd;
   padding: 4px 8px 6px 8px;
   border-radius: 4px;
   border-bottom: 2px solid #3B7F94;
   margin-bottom: 15px;
-  transition: 0.2s opacity; /* see .button:hover */
+  transition: 0.2s opacity; /* see .button:hover // transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay]; */
 }
 .button:visited {
   color: #f7fffd;
@@ -174,6 +184,7 @@ img {
   text-decoration: none;
 }
 .button:active {
+  opacity: 0.7;
   background-color: #4fe0b2;
   border-bottom: 2px solid #38A180;
   text-decoration: none;
@@ -242,11 +253,16 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
-    padding: 20px 15px;
+    padding: 20px 0;
   }
   nav {
     width: auto;
     float: right;
+  }
+  nav > ul {
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    margin-top: 5px;
   }
   main {
     padding-top: 65px;
@@ -269,6 +285,9 @@ Medium devices (640px and larger)
   img {
     margin-top: 16px;
   }
+  .button {
+    font-size: 1.1em;
+  }
   .container {
     padding: 0 15px;
   }
@@ -276,9 +295,6 @@ Medium devices (640px and larger)
   [class*="col-"] {
     float: left;
     padding: 0 20px 0 0;
-  }
-  .col-md-4 {
-    width: 33,3%;
   }
   .col-md-6 /* naming because of 6 times column of standard web-grid of 12  */
   {
@@ -298,6 +314,10 @@ Medium devices (640px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  nav > ul {
+    font-size: 1.3em;
+    margin-top: 6px;
+  }
   h1 {
     font-size: 2.5em;
   }
@@ -308,24 +328,24 @@ Large devices (1024px or larger)
     font-size: 1.8em;
   }
   p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.7;
+  }
+  .button {
+    font-size: 1.3em;
   }
   .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
+  }
   .col-lg-7 {
     width: 60%;
   }
   .col-lg-5{
     width: 40%;
   }
-}
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-
+  #logo {
+    font-size: 1.8em;
+  }
 }
