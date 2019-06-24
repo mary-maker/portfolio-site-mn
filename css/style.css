@@ -89,15 +89,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.4em;
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 1.2em;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.12em;
 }
 
 h4 {
@@ -107,7 +107,7 @@ h4 {
 p {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* Mind the order: visited - hover/focus - active*/
@@ -248,15 +248,23 @@ Medium devices (640px and larger)
     width: auto;
     float: right;
   }
-  nav > ul {
-    margin-bottom: 0px;
-    margin-top: 4px;
-  }
   main {
     padding-top: 65px;
   }
+  h1 {
+    font-size: 1.8em;
+    margin: 34px 0;
+  }
+  h2 {
+    font-size: 1.65em;
+  }
   h3 {
+    font-size: 1.5em;
     margin-top: 8px;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
   }
   img {
     margin-top: 16px;
@@ -282,4 +290,42 @@ Medium devices (640px and larger)
   #about-page h3 {
     margin-top: 0;
   }
+  #logo {
+    font-size: 1.4em;
+  }
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2.3em;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.7;
+  }
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .col-lg-7 {
+    width: 60%;
+  }
+  .col-lg-5{
+    width: 40%;
+  }
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+
 }
