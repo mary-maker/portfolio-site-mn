@@ -36,26 +36,17 @@ header {
   position: fixed;
   width: 100%; /* added 24/05/19: if you do end up using position: fixed for your <header>, make sure you add a width of 100%, as well, the same as you did whenever you used display: inline-block. Otherwise, it won’t expand to fill the full width of larger screens later. */
   background-color: #f7fffd;
-  text-align: center;
-  padding: 15px 0 10px 0;
+  /*text-align: center; removed for mobile burger menu*/
+  padding: 15px 0 13px;
   -webkit-box-shadow: 0px 1px 5px 0px rgba(59, 127, 148, 0.75);
   -moz-box-shadow:    0px 1px 5px 0px rgba(59, 127, 148, 0.75);
   box-shadow:         0px 1px 5px 0px rgba(59, 127, 148, 0.75);
-}
-nav {
-  display: inline-block;
-  width: 100%;
 }
 /* note the ">" for referring only to unorded lists INSIDE of Navigation Bar(s) - maybe since HTML5 because <nav> exists since HTML5? */
 nav > ul {
   list-style-type: none;
   padding: 0; /* there was a default padding-left of 40px, now it's gone */
-  margin-bottom: 4px;
-  margin-top: 12px;
-}
-nav > ul > li {
-  display: inline-block;
-  padding: 0 15px; /* I decided to put the padding into the <li> instead of <a> - just in case, there is less likely a broken <li> than a broken <a> */
+  margin: 0;
 }
 nav > ul > li > a {
   font-family: 'Raleway', sans-serif;
@@ -73,7 +64,7 @@ nav > ul > li > a:active {
 }
 
 main {
-  padding-top: 88px;
+  padding-top: 60px;
 }
 
 footer {
@@ -117,6 +108,7 @@ a {
   font-weight: 300;
   color: #55b6d4;
   text-decoration: none;
+  padding: 0 15px;
 }
 a:visited {
   color: #3B7F94;
@@ -135,6 +127,19 @@ img {
 }
 
 /* Layout */
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle .navtoggle.responsive { /* that responsive class will appear in js */
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 14px;
+  padding-right: 10px;
+  font-size: 20px;
+}
 .container {
   padding: 0 10px;
   /*background-color: #E7F6FB;*/
@@ -252,7 +257,6 @@ img {
   font-size: 0.75em;
 }
 
-
 /*.sun {
   animation-duration: 3s;
   animation-name: color-change;
@@ -271,7 +275,7 @@ img {
 }
 
 #logo {
-  max-width: 250px;
+  max-width: 150px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -313,9 +317,9 @@ img {
 }
 
 /* ==============================
-Medium devices (640px and larger)
+Medium devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     text-align: unset;
     padding: 20px 0;
@@ -327,7 +331,10 @@ Medium devices (640px and larger)
   nav > ul {
     font-size: 1.1em;
     margin-bottom: 0px;
-    margin-top: 5px;
+    margin-top: 2px;
+  }
+  nav > ul > li {
+    display: inline-block; /* now I am here for the burger menu on mobile devices. Previous location: generell styling outside of @media*/
   }
   main {
     padding-top: 65px;
@@ -351,6 +358,12 @@ Medium devices (640px and larger)
   }
   img {
     margin-top: 16px;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
   }
   .button {
     font-size: 1.1em;
