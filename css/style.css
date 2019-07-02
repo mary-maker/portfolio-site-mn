@@ -140,6 +140,17 @@ img {
   padding-right: 10px;
   font-size: 20px;
 }
+.navtoggle.responsive nav {
+  padding: 18px 0 0; /* maybe: top padding is same to logo's bottom padding - 13px */
+}
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(168,184,188, 0.3);
+}
+.navtoggle.responsive li:last-child {
+  padding: 0;
+}
 .container {
   padding: 0 10px;
   /*background-color: #E7F6FB;*/
