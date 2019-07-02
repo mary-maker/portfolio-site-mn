@@ -15,6 +15,9 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- END of CSS -->
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/d9c956133d.js"></script>
+  <!-- END of FontAwesome -->
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
@@ -23,21 +26,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- END Viewport Mobile -->
   <meta charset="utf-8">
-  <title>Project Einschreiben</title>
+  <title>Maria Neureither UX/UI Designer</title>
 </head>
 
 <body>
   <header>
     <div class="container" id="top">
-      <a href="index.html" id="logo">UX Mary</a>
-      <nav>
-        <!-- Navigation tag - HTML5 -->
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle"><!-- added for hamburger menu -->
+        <a href="index.html" id="logo">UX Mary</a>
+        <nav>
+          <!-- Navigation tag - HTML5 -->
+          <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact" onclick="menuToggle()" id="smooth">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle(); smoothAppear()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main>
@@ -136,7 +142,9 @@
     </div><!-- end of yellow -->
   </footer>
   <!-- JavaScript -->
+  <!-- <-This is jQuery: alternativly I can download and link to it, but not recommended -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- for smooth scrolling on all (?) browsers (by w3schools) -->
   <script src="js/script.js"></script>
   <!-- END of JavaScript -->
 </body>

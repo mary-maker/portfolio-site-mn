@@ -5,9 +5,10 @@
 var name = 'Mary';
 console.log("Welcome to the Portolio Site of");
 console.log(name);
-//
+// The burger menu opens and closes:
 function menuToggle() {
   var x = document.getElementById('myNavtoggle'); //so it gets the div with the id myNavtoggle
+
   if (x.className === 'navtoggle') {
     x.className += ' responsive';
   }
@@ -15,3 +16,36 @@ function menuToggle() {
     x.className = 'navtoggle';
   }
 }
+// Trying to smooth opening menu
+/* function smoothAppear() {
+  //var y = document.getElementsByClassName('navtoggle');
+  $('.navtoggle.responsive nav').slideToggle('slow');
+  console.log("Well, yes...");
+}
+  */
+
+// Smooth scrooling // by W3schools
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("#smooth").on('click', function(smoothscroll) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      smoothscroll.preventDefault();
+
+      // Store hash
+      var hash = this.hash; // Mary: this is NOT ONLY for renaming the URL to ...#contact
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (e.g. 800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 600, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
