@@ -17,3 +17,4 @@ var b = (x-50)*(x/20);
 var c = x + (x*0.5);
 var d = (x-50)*3;
 console.log(a, b, c, d);
+//
