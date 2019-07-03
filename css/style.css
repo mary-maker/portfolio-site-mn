@@ -121,6 +121,9 @@ a:active {
   color: #4fe0b2;
   text-decoration: underline;
 }
+p > a {
+  padding: 0;
+}
 
 img {
   width: 100%;
