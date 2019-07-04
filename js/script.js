@@ -16,13 +16,6 @@ function menuToggle() {
     x.className = 'navtoggle';
   }
 }
-// Trying to smooth opening menu
-/* function smoothAppear() {
-  //var y = document.getElementsByClassName('navtoggle');
-  $('.navtoggle.responsive nav').slideToggle('slow');
-  console.log("Well, yes...");
-}
-  */
 
 // Smooth scrooling // by W3schools
 $(document).ready(function(){
@@ -35,7 +28,7 @@ $(document).ready(function(){
       smoothscroll.preventDefault();
 
       // Store hash
-      var hash = this.hash; // Mary: this is NOT ONLY for renaming the URL to ...#contact
+      var hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (e.g. 800) specifies the number of milliseconds it takes to scroll to the specified area
