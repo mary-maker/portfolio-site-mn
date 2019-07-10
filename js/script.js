@@ -17,7 +17,7 @@ function menuToggle() {
   }
 }
 
-// Smooth scrooling // by W3schools
+// Smooth scrolling // by W3schools
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("#smooth").on('click', function(smoothscroll) {
