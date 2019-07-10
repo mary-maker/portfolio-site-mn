@@ -6,7 +6,7 @@ Secondary Color (Pink): #e07090; - Darker: #944A5F;
 Text Color (Black): #12313b;
 (White): #f7fffd;
 (White-Blue): #E7F6FB;
-(Grey): #a8b8bc;
+(Grey): #62797F; instead of #a8b8bc for passing AA
 Fonts used:
 Raleway 400 and 700;
 Roboto 300 and 500;
@@ -51,13 +51,13 @@ nav > ul {
 nav > ul > li > a {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase; /* I want to see broken <a> if these happens to be non-uppercase */
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:visited {
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:hover, a:focus  {
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:active {
   color: #e07090;
@@ -310,7 +310,7 @@ img {
 }
 #work .row {
   padding-bottom: 20px;
-  border-bottom: 1px solid #a8b8bc;
+  border-bottom: 1px solid #62797F;
 }
 #last.row  {
   border-bottom: 0px;
