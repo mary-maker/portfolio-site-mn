@@ -33,8 +33,8 @@ $(document).ready(function () {
         scrollTop: $(hash).offset().top
       }, 600, function () {
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+        window.location.hash = hash
+      })
     } // End if
-  });
-});
+  })
+})

@@ -170,11 +170,13 @@ img {
   background: linear-gradient(135deg, #55B6D4 0%, #4fe0b2 75%);
 }
 .gradient a {
-  color: #f7fffd;
+  /* for passing AA accessibility instead of planned whity text-color #f7fffd */
+  color: #12313b;
+  font-weight: 500;
   transition: 0.2s opacity;
 }
 .gradient a:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .gradient a:active {
   color: #e07090;
