@@ -381,6 +381,14 @@ Medium devices (641px and larger)
   .navtoggle li:last-child {
     display: none;
   }
+  .navtoggle.responsive li:not(:last-child) {
+    display: inline-block;
+    padding: 0;
+    border-top: none;
+  }
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
   .button {
     font-size: 1.1em;
   }
