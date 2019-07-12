@@ -1,7 +1,3 @@
-/** Commenting on line One
-  * line Two
-  * line Three
-  */
 // The burger menu opens and closes:
 function menuToggle () {
   var x = document.getElementById('myNavtoggle')
@@ -14,19 +10,17 @@ function menuToggle () {
   }
 }
 
-// Smooth scrolling // by W3schools
+// Smooth scrolling by W3schools:
+// Browser support: Chrome, Firefox, Opera. NO SUPPORT: IE, Safari.
 $(document).ready(function () {
-  // Add smooth scrolling to all links
+  // Add smooth scrolling to all links:
   $('.smooth').on('click', function (smoothscroll) {
-
-    // Make sure this.hash has a value before overriding default behavior
+    // Make sure this.hash has a value before overriding default behavior:
     if (this.hash !== '') {
-      // Prevent default anchor click behavior
+      // Prevent default anchor click behavior:
       smoothscroll.preventDefault()
-
-      // Store hash
+      // Store hash:
       var hash = this.hash
-
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (e.g. 800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({

@@ -300,6 +300,7 @@ img {
   background: -webkit-linear-gradient(#55b6d4, #4fe0b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
 #hero {
