@@ -6,7 +6,7 @@ Secondary Color (Pink): #e07090; - Darker: #944A5F;
 Text Color (Black): #12313b;
 (White): #f7fffd;
 (White-Blue): #E7F6FB;
-(Grey): #a8b8bc;
+(Grey): #62797F; instead of #a8b8bc for passing AA
 Fonts used:
 Raleway 400 and 700;
 Roboto 300 and 500;
@@ -51,13 +51,13 @@ nav > ul {
 nav > ul > li > a {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase; /* I want to see broken <a> if these happens to be non-uppercase */
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:visited {
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:hover, a:focus  {
-  color: #a8b8bc;
+  color: #62797F;
 }
 nav > ul > li > a:active {
   color: #e07090;
@@ -160,7 +160,7 @@ img {
 }
 .hundred{
   width: 100%;
-  max-width 100%;
+  max-width: 100%;
   height: auto;
 }
 .gradient {
@@ -170,11 +170,13 @@ img {
   background: linear-gradient(135deg, #55B6D4 0%, #4fe0b2 75%);
 }
 .gradient a {
-  color: #f7fffd;
+  /* for passing AA accessibility instead of planned whity text-color #f7fffd */
+  color: #12313b;
+  font-weight: 500;
   transition: 0.2s opacity;
 }
 .gradient a:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .gradient a:active {
   color: #e07090;
@@ -298,6 +300,7 @@ img {
   background: -webkit-linear-gradient(#55b6d4, #4fe0b2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
 #hero {
@@ -310,7 +313,7 @@ img {
 }
 #work .row {
   padding-bottom: 20px;
-  border-bottom: 1px solid #a8b8bc;
+  border-bottom: 1px solid #62797F;
 }
 #last.row  {
   border-bottom: 0px;
@@ -379,6 +382,14 @@ Medium devices (641px and larger)
   .navtoggle li:last-child {
     display: none;
   }
+  .navtoggle.responsive li:not(:last-child) {
+    display: inline-block;
+    padding: 0;
+    border-top: none;
+  }
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
   .button {
     font-size: 1.1em;
   }
@@ -394,7 +405,7 @@ Medium devices (641px and larger)
     width: 50%;
   }
   .col-md-8 {
-    width: 66,6%;
+    width: 60%;
   }
   #about-page h3 {
     margin-top: 0;
