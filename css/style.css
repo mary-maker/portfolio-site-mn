@@ -98,8 +98,13 @@ h5 {
   font-size: 1em;
   font-weight: 400;
 }
+h6 {
+  font-size: 1em;
+  text-align: center;
+  margin: 0 12%;
+}
 
-p, ul {
+p, ul, h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.45;
@@ -282,6 +287,10 @@ img.framed {
   -moz-box-shadow: 0px 0px 4px 2px rgba(44,92,106,0.2);
   box-shadow: 0px 0px 4px 2px rgba(44,92,106,0.2);
 }
+.p-content {
+  margin: 60px 0 80px 0;
+}
+
 
 /*.sun {
   animation-duration: 3s;
@@ -346,7 +355,7 @@ img.framed {
   margin-bottom: 1.8em;
 }
 #project img {
-  margin: 40px 0;
+  margin-top: auto;
 }
 
 @keyframes color-change {
@@ -403,9 +412,6 @@ Medium devices (641px and larger)
     line-height: 1.6;
     margin: 16px 0;
   }
-  img {
-    margin-top: 16px;
-  }
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
@@ -450,6 +456,9 @@ Medium devices (641px and larger)
   #logo {
     font-size: 1.4em;
   }
+  #project img {
+    margin-top: 3em;
+  }
 }
 /* ==============================
 Large devices (1024px or larger)
@@ -492,5 +501,8 @@ Large devices (1024px or larger)
   }
   #project p {
     margin-left: 16px;
+  }
+  #project img {
+    margin-top: 4em;
   }
 }
