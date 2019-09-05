@@ -32,116 +32,162 @@
 <body>
   <header>
     <div class="container" id="top">
-      <!-- following div is added for hamburger menu -->
-      <div class="navtoggle" id="myNavtoggle">
+      <div class="navtoggle" id="myNavtoggle"><!-- added for hamburger menu -->
         <a href="index.html" id="logo">UX Mary</a>
-        <!-- Navigation tag - HTML5 -->
         <nav>
+          <!-- Navigation tag - HTML5 -->
           <ul>
-            <li><a href="#work" onclick="menuToggle()" class="smooth">Work</a></li>
+            <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#contact" onclick="menuToggle()" class="smooth">Contact</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle();"><i class="fas fa-bars"></i></a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle(); smoothAppear()"><i class="fas fa-bars"></i></a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <!-- main contains what is NOT repeated in other documents -->
   <main>
-    <!-- following div is inside main - the orange part -->
-    <div id="hero" class="center">
-      <!-- the yellow div: -->
-      <div class="container">
-        <h1>Hi, I’m Mary, <span>a Berlin-based UX Designer<br>with a background in game design.</span></h1>
-        <p>I love to work in SCRUM, to organize Design Sprints and illustrate. I also enjoy learning and realizing new stuff like frontend development, as you can see in THIS portfolio - handmade HTML/CSS with lots of geeky love.</p>
+      <div class="container" id="project">
+        <div>
+          <h1>Persona study</h1>
+          <h5>Deutsche Post</h5>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_all123@2x.png" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_all123@2x.png" alt="Persona characters one, two and three">
+          </picture>
+        </div>
+        <!-- (stripe 1): -->
+        <div class="p-content">
+          <!-- row1:about - 2 columns -->
+          <div>
+            <!-- column1 headline -->
+            <div class="col-md-2">
+              <h4>About</h4>
+            </div>
+            <!-- END: column1 headline -->
+            <!-- column2 descrip -->
+            <div class="col-md-8">
+              <p>The ongoing persona study presents different user types that visits a post office and use specific post services there.<br>The data obtained visualizes their needs for their visit and shows the potential of each persona group to use Deutsche Post’s services via digital solutions instead of visiting their local post office.</p>
+            </div>
+            <!-- END: column2 descrip -->
+          </div>
+          <!-- END of row1:about -->
+          <!-- row2:concept -->
+          <!-- column1 headline -->
+          <div class="col-md-2">
+            <h4>Concept</h4>
+          </div>
+          <!-- END: column1 headline -->
+          <!-- column2 descrip -->
+          <div class="col-md-8">
+            <p>The persona project started with several focus group sessions to identify potential user groups of post office customers. Afterwards an online survey enriched and refined the user groups.</p>
+          </div>
+          <!-- END: column2 descrip -->
+          <!-- END of row2:concept -->
+        </div>
+        <!-- END of (stripe 1) -->
+        <div  class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_illustrator-gk@1x.png" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_illustrator-gk@2x.png" alt="Persona illustration business lady">
+          </picture>
+        </div>
+        <!-- (stripe 2): -->
+        <div class="p-content">
+          <!-- row1:about - 2 columns -->
+          <div>
+            <!-- column1 headline -->
+            <div class="col-md-2">
+              <h4>my tasks</h4>
+            </div>
+            <!-- END: column1 headline -->
+            <!-- column2 descrip -->
+            <div class="col-md-8">
+              <p>Illustration, data visualisation.</p>
+            </div>
+            <!-- END: column2 descrip -->
+          </div>
+          <!-- END of row1:about -->
+          <!-- row2:tools -->
+          <!-- column1 headline -->
+          <div class="col-md-2">
+            <h4>tools</h4>
+          </div>
+          <!-- END: column1 headline -->
+          <!-- column2 descrip -->
+          <div class="col-md-8">
+            <p>Sketch and Adobe Illustrator for graphic design,<br>InDesign and PowerPoint for Layouting.</p>
+          </div>
+          <!-- END: column2 descrip -->
+          <!-- END of row2:concept -->
+        </div>
+        <!-- END of (stripe 2) -->
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_illustrator-hobby@1x.png" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_illustrator-hobby@2x.png" alt="Persona illustration hobby-seller">
+          </picture>
+        </div>
+        <div class="p-content">
+          <div>
+            <div class="col-md-2">
+              <h4>Why Powerpoint?</h4>
+            </div>
+            <div class="col-md-8">
+              <p>At an early stage I started with the layouting tool Adobe Indesign to define the look of the report pages. Afterwards I translated the final design into a PowerPoint file to make sure other non-designer colleagues are able to edit the data.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_page@1x.jpg" media="(max-width:767px)">
+            <img class="framed" src="img/persona/project_dp-persona_page@2x.jpg" alt="Persona sheet hobby-seller">
+          </picture>
+        </div>
+        <div class="p-content">
+          <div>
+            <div class="col-md-2">
+              <h4>The style</h4>
+            </div>
+            <div class="col-md-8">
+              <p>The simple and reduced shapes simplify the characters and enable to reuse for additional figures. The textures used for coloring and shading gives the artwork a handmade, more organic look.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_scribble@1x.jpg" media="(max-width:767px)">
+            <img class="framed" src="img/persona/project_dp-persona_scribble@2x.jpg" alt="The original scribbles for the characters">
+          </picture>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_sketch_wip@1x.jpg" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_sketch_wip@2x.jpg" alt="Work in progress creating one character">
+          </picture>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_illustrator-multi@1x.png" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_illustrator-multi@2x.png" alt="Persona illustration multitasker">
+          </picture>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_titelbild@1x.jpg" media="(max-width:767px)">
+            <img class="framed" src="img/persona/project_dp-persona_titelbild@2x.jpg" alt="Persona study cover">
+          </picture>
+        </div>
+        <div class="p-content">
+          <picture>
+            <source srcset="img/persona/project_dp-persona_all456@2x.png" media="(max-width:767px)">
+            <img src="img/persona/project_dp-persona_all456@2x.png" alt="Persona characters four, five and six">
+          </picture>
+        </div>
       </div>
-    </div>
   </main>
-  <div id="work">
-    <div class="container">
-      <h2 class="center">My work</h2>
-      <!-- Project One - I contain two columns: -->
-      <div class="row">
-        <!-- first column with picture: -->
-        <div class="col-md-6 col-lg-7">
-          <picture>
-            <source srcset="img/dp-top-products/dp-top-products_sprint@1x.jpg" media="(max-width:767px)">
-            <img src="img/dp-top-products/dp-top-products_sprint@2x.jpg" alt="Design Sprint Day One of Einschreiben project">
-          </picture>
-        </div>
-        <!-- END of first column -->
-        <!-- second column with desription: -->
-        <div class="col-md-6 col-lg-5">
-          <h3>Optimizing “Einschreiben”-Landingpage</h3>
-          <p>Deutsche Post's additional service “Einschreiben” gets an overhaul - focusing on information which are relevant for the users' intention to buy.</p>
-          <p>My roles and tasks: Design Sprint facilitator, concepting, wireframing, design.</p>
-          <p>Tools: Post-Its, Sketch, Zeplin, internal CMS-Tool.</p>
-          <a href="einschreiben.html" class="button">view project</a>
-        </div>
-        <!-- end of second column -->
-      </div>
-      <!-- Project - I contain two columns: -->
-      <div class="row">
-        <!-- first column with picture: -->
-        <div class="col-md-6 col-lg-7">
-          <picture>
-            <source srcset="img/internetmarke/project_dp-internetmarke_usertest01@1x.jpg" media="(max-width:767px)">
-            <img src="img/internetmarke/project_dp-internetmarke_usertest01@2x.jpg" alt="Usability test internetmarke">
-          </picture>
-        </div>
-        <!-- END of first column -->
-        <!-- second column with desription: -->
-        <div class="col-md-6 col-lg-5">
-          <h3>Redesign of “Internetmarke” configuration</h3>
-          <p>Get a look at the redesigned configurator for self-printable postage stamps and at all the iterations loops.</p>
-          <p>My roles and tasks: Design Sprint facilitator, concepting, wireframing, design, prototyping.</p>
-          <p>Tools: Post-Its, Sketch, Axure RP, InVision, Zeplin.</p>
-          <a href="internetmarke.html" class="button">view project</a>
-        </div>
-        <!-- end of second column -->
-      </div>
-      <!-- Project - I contain two columns: -->
-      <div class="row">
-        <!-- first column with picture: -->
-        <div class="col-md-6 col-lg-7">
-          <picture>
-            <source srcset="img/persona/project_dp-persona_illustrator-multi@1x.jpg" media="(max-width:767px)">
-            <img src="img/persona/project_dp-persona_illustrator-multi@2x.jpg" alt="Persona character multitasker">
-          </picture>
-        </div>
-        <!-- END of first column -->
-        <!-- second column with desription: -->
-        <div class="col-md-6 col-lg-5">
-          <h3>Persona study</h3>
-          <p>The ongoing persona study presents different user types that visits a post office and use specific post services there.</p>
-          <p>My tasks: Illustration, data visualisation.</p>
-          <p>Tools: Sketch, Adobe Illustrator, InDesign and PowerPoint </p>
-          <a href="persona.html" class="button">view project</a>
-        </div>
-        <!-- end of second column -->
-      </div>
-      <!-- Project Two - I contain two columns: -->
-      <div class="row" id="last">
-        <!-- first column with picture: -->
-        <div class="col-md-6 col-lg-7">
-          <picture>
-            <source srcset="img/drawcowboy/drawcowboy_title@1x.jpg" media="(max-width:767px)">
-            <img src="img/drawcowboy/drawcowboy_title@2x.jpg" alt="Draw Cowboy Titlescreen">
-          </picture>
-        </div>
-        <!-- end of first column -->
-        <!-- second column with description: -->
-        <div class="col-md-6 col-lg-5">
-          <h3>Draw Cowboy</h3>
-          <p>A cartoony western iOS game in which the player uses gestures on Touchscreen to defeat enemies and to rescue the damsel in distress.</p>
-          <p>My roles and tasks: Assistant Producer, Level Designer, UI Designer.</p>
-          <p>Tools: Unity3D, Autodesk 3dsMax, Adobe Photoshop.</p>
-        </div>
-        <!-- END of second column -->
-      </div>
-    </div>
-  </div>
   <footer id="contact" class="center gradient">
     <!-- yellow: -->
     <div class="container">
@@ -182,9 +228,8 @@
     <!-- end of yellow -->
   </footer>
   <!-- JavaScript -->
-  <!-- <-This is jQuery: alternativly I can download and link to it, but not recommended //
-  //// For future projects, however, keep in mind that when only adding a few of lines of functionality, you can probably avoid including jQuery in your site. ////-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- for smooth scrolling on all (?) browsers (by w3schools) -->
   <script src="js/script.js"></script>
   <!-- END of JavaScript -->
 </body>
